@@ -1,0 +1,2906 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+border: 0;
+font: inherit;
+font-size: 100%;
+margin: 0;
+padding: 0;
+vertical-align: baseline;
+}
+html {
+margin-right: 0 !important;
+}
+a:focus {
+outline: none;
+} article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+img {
+display: block;
+}
+ol,
+ul {
+list-style: none;
+}
+blockquote,
+q {
+quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+.clear {
+clear: both;
+}
+iframe {
+display: block;
+}
+body {
+font-family: 'Gal Gothic', sans-serif;
+margin: 0 !important;
+}
+:root {
+--preto: #000000;
+--branco: #ffffff;
+--roxo: #A63C8B;
+--verde: #8BBC8A;
+--azul-escuro: #11609C;
+--azul-claro: #0DABE3;
+--galgothictrial: 'Gal Gothic Trial';
+--amarelo: #F8B324;
+--transicao: .3s all ease-in-out;
+}
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");  @font-face {
+font-family: "Gal Gothic Trial";
+src: url(../fonts/GalGothicTrial-MediumItalic.otf);
+font-weight: 400;
+} @font-face {
+font-family: 'Futura Std Book';
+font-style: normal;
+font-weight: normal;
+src: local('Futura Std Book'), url(../fonts/FuturaStdBook.woff) format('woff');
+unicode-range: U+0000-00FF;
+}
+@font-face {
+font-family: 'Futura Std Medium';
+font-style: normal;
+font-weight: normal;
+src: local('Futura Std Medium'), url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/fonts/FuturaStdMedium.woff) format('woff');
+unicode-range: U+0000-00FF;
+}
+@font-face {
+font-family: 'Futura Std Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Futura Std Bold'), url(../fonts/FuturaStdBold.woff) format('woff');
+unicode-range: U+0000-00FF;
+}
+@font-face {
+font-family: 'Acworth';
+src: url(../fonts/AcworthBold.woff2) format('woff2'),
+url(../fonts/AcworthBold.woff) format('woff');
+font-weight: bold;
+font-style: normal;
+font-display: swap;
+unicode-range: U+0000-00FF;
+}   
+html::-webkit-scrollbar-track {
+background: rgb(255 255 255);
+}
+html::-webkit-scrollbar-thumb {
+background-color: #A63C8B;
+border-radius: 20px;
+border: 3px solid rgb(255 255 255);
+}
+html::-webkit-scrollbar {
+width: 12px;
+height: 10px;
+}
+::-webkit-scrollbar-track {
+background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+background-color: #A63C8B;;
+border-radius: 20px;
+border: 2px solid #ffffff;
+}
+::-webkit-scrollbar {
+width: 12px;
+height: 10px;
+} #banner{
+width: 100%;
+position: relative;
+}
+#banner img{
+width: 100%;
+height: auto;
+}
+h1{
+color: blue
+} .site-main{
+overflow: hidden;
+} #container-header .main-navigation.header-fixo {
+padding: 0.8vw 2.1vw;
+border-radius: 0 0 20px 20px;
+box-shadow: none;
+}
+#container-header #masthead {
+position: absolute;
+width: 100%;
+transform: translateY(0);
+opacity: 1;
+}
+#container-header #masthead.header-fixo {
+position: fixed;
+background-color: var(--roxo);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+transform: translateY(0); opacity: 1;
+top: 0;
+z-index: 99;
+}
+#container-header #masthead.header-fixo .main-navigation {
+padding: 15px 3.5vw;
+}
+#container-header .site-header {
+position: absolute;
+z-index: 10;
+margin-top: 0;
+left: 0;
+width: 100%;
+}
+#container-header .main-navigation{
+z-index: 2;
+background-color: var(--roxo);
+padding: 1.41vw 2.1vw 1.41vw 2.1vw;
+border-radius: 50px 0 0 50px;
+display: flex;
+width: auto;
+display: flex;
+gap: 12px;
+align-items: stretch;
+justify-content: flex-start;
+float: right;
+transition: padding 0.4s ease, background-color 0.4s ease;
+box-shadow: 0px 0px 20px 0px #0000004D;
+}
+#container-header .main-navigation ul li a{
+font-size: 14px;
+color: #FFFFFF;
+position: relative;
+font-family: 'Futura Std Bold';
+}
+#container-header .main-navigation ul{
+display: flex;
+gap: 1.563vw;
+}
+#container-header .main-navigation ul li a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -3px;
+width: 100%;
+height: 2px;
+background-color: var(--amarelo);
+transition: var(--transicao);
+transform: scaleX(0);
+transform-origin: center;
+}
+#container-header .main-navigation ul li a:hover::after {
+transform: scaleX(1);
+}
+#container-header #masthead.header-fixo {
+position: fixed;
+background: var(--roxo);
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+margin-top: 0;
+width: 100%;
+z-index: 99;
+}
+#container-header .menu_mobile{
+display: none;
+} #sobre{
+position: relative;
+}
+#sobre .container{
+display: flex;
+justify-content: flex-end;
+padding: 120px 0 59px 0;
+gap: 2.604vw;
+}
+#sobre .container .dir img{
+border-radius: 20px 0 0 20px;
+}
+#sobre .container .dir .etiqueta{
+font-family: 'Futura Std Medium';
+font-weight: 500;
+font-size: 19.77px;
+line-height: 29.70px;
+text-align: center;
+position: relative;
+top: -15px;
+left: 43px;
+border-radius: 5px;
+padding: 3px 0px;
+color: #FFFFFF;
+background-color: var(--roxo);
+z-index: 10;
+background-size: contain;
+width: 251px;
+}
+#sobre .container .dir .etiqueta::before {
+content: '';
+background-image: url(../images/etiqueta-galeria.svg);
+background-repeat: no-repeat;
+width: 253.66px;
+height: 37.33px;
+padding: 15px;
+position: absolute;
+top: 0px;
+left: 0%;
+z-index: -1;
+}
+#sobre .container .esq{
+width: 36.2%;
+}
+#sobre .container .esq .textos .titulo {
+font-size: 36px;
+font-weight: 700;
+line-height: 44px;
+letter-spacing: 3px;
+color: var(--azul-escuro);
+margin-bottom: 15px;
+margin-top: 20px;
+width: 90%;
+font-family: 'Acworth';
+}
+#sobre .container .esq .textos .texto{
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+margin-bottom: 30px;
+font-family: 'Futura Std Medium';
+width: 84%;
+}
+#sobre .container .esq .topicos{
+display: flex;
+padding-top: 30px;
+gap: 15px;
+position: relative;
+}
+#sobre .container .esq .topicos:before{
+content: '';
+background-image: url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/images/icones/vetor-borda.svg);
+width: 100%;
+height: 2px;
+background-repeat: no-repeat;
+position: absolute;
+top: 0;
+}
+#sobre .container .esq .topicos ul{
+width: 49%;
+}
+#sobre .container .esq .topicos ul li{
+display: flex;
+gap: 25px;
+align-items: flex-start;
+margin-bottom: 20px;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+font-family: 'Futura Std Medium';
+}
+#sobre .container .esq .topicos ul li span svg{
+position: relative;
+}
+#sobre .container .esq .topicos ul li span .arrow{
+bottom: 23px !important;
+position: relative;
+}
+#sobre:before {
+content: url(../images/fundo-1.webp);
+background: no-repeat;
+width: 100%;
+height: auto;
+position: absolute;
+box-sizing: border-box;
+top: -15px;
+z-index: -1;
+opacity: 0.3;
+}
+#sobre:after {
+content: url(../images/fundo-2.webp);
+width: 100%;
+height: auto;
+top: 1160px;
+position: absolute;
+box-sizing: border-box;;
+z-index: -1;
+opacity: 0.3;
+} #contato {
+padding: 50px 0 1.8vw;
+color: var(--roxo);
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+#contato .container {
+display: flex;
+width: 90%;
+max-width: 1375px;
+margin: 0 auto;
+gap: 7.92vw;
+align-items: center;
+}
+#contato .esq {
+width: 52%;
+}
+#contato .esq img {
+margin-top: 10%;
+margin-left: 23%;
+}
+#contato .dir {
+width: 37.9%;
+height: 658px;
+background-size: cover;
+background: linear-gradient(34.47deg, #E94C97 -6.67%, #FFB7D9 103.08%);  
+background-repeat: no-repeat;
+border-radius: 20px;
+color: var(--branco);
+padding: 2.12vw 3.685vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+#contato .form-titulo {
+font-weight: 300;
+font-family: 'Futura Std Medium';
+font-size: 30px;
+line-height: 35px;
+letter-spacing: 1.2px;
+text-align: center;
+margin-bottom: 5px;
+color: #000000
+}
+#contato .dir svg {
+margin-top: 20px;
+margin-bottom: 25px;
+width: 10.677vw;
+height: auto;
+}
+#contato .obrigatorios {
+font-weight: 500;
+font-family: 'Futura Std Medium';
+font-size: 12px;
+line-height: 13.63px;
+letter-spacing: 0.4px;
+color: #FCF4E7;
+}
+#contato .form-padrao {
+width: 100%;
+margin-top: 30.02px;
+}
+#contato .dir .box-input {
+margin-bottom: 13px;
+position: relative;
+align-items: center;
+display: flex;
+gap: 6px;
+}
+#contato .dir .box-input input, 
+#contato .dir .box-input select, 
+#contato .dir .box-input textarea {
+width: 100%; height: 41.94px;
+border: 1.5px solid #FCF4E7;
+color: var(--branco);
+background-color: transparent;
+border-radius: 13px;
+font-size: 14px;
+padding-left: 14.35px;
+transition: .3 ease-in-out;
+font-family: 'Acworth';
+}
+#contato .dir .box-input textarea {
+height: 55.92px !important;
+font-family: 'Acworth';
+padding-top: 10px;
+}
+#contato .dir .box-input .label-form {
+color: #FCF4E7;
+position: absolute;
+top: 14px;
+left: 21px;
+font-size: 14px;
+font-weight: 600;
+transition: var(--transicao);
+z-index: 1;
+transition: top 0.3s ease, font-size 0.4s ease, color 0.4s ease;
+font-family: 'Acworth';
+}
+#contato .dir .box-input .label-form.subir {
+background-color: #E94C97;
+padding: 3px 8px;
+left: 13.25px;
+top: -9px;
+border-radius: 6px;
+z-index: 1;
+font-size: 12px;
+}
+input:focus,
+textarea:focus {
+outline: none;
+box-shadow: none;
+}
+#contato .dir .box-input {
+margin-bottom: 15px;
+position: relative;
+display: -webkit-box;
+display: -ms-flexbox;
+align-items: center;
+display: flex;
+gap: 6px;
+}
+#contato .dir .enviar:hover {
+transform: translateY(-2px) scale(1.02);
+background-color: #E94C97 ; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+#contato .dir .box-input.box-check input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+border: 0.93px solid #FFFFFF!important;
+background-color: transparent !important;
+border-radius: 4px;
+width: 17px;
+height: 17px;
+cursor: pointer;
+position: relative;
+} #contato .dir .box-input.box-check input[type="checkbox"]:checked::after {
+content: "✔";
+color: white;
+font-size: 10px;
+position: absolute;
+top: 0px;
+left: 4px;
+}
+#contato .dir .enviar {
+color: #ffffff;
+background-color:var(--azul-claro);
+border: none;
+font-size: 21px;
+line-height: 16.78px;
+font-weight: 700;
+letter-spacing: 0.01%;
+border-radius: 13px;
+padding: 14px 0;
+display: block;
+width: 100%;
+overflow: hidden;
+position: relative;
+text-align: center;
+transition: var(--transicao);
+cursor: pointer;
+}
+#contato .dir .autorizo {
+font-size: 10.81px;
+margin-left: 5px;
+text-align: left;
+flex: 1;
+color: #FCF4E7;
+font-weight: 400;
+}
+#contato:before {
+content: '';
+background: url(../images/arcoiris-direita.webp) no-repeat;
+width: 19.01vw;
+background-size: contain;
+height: 40.313vw;
+position: absolute;
+box-sizing: border-box;
+top: -10.84px;
+left: 0;
+}
+#contato:after {
+content: '';
+background: url(../images/arcoiris-esquerda.webp) no-repeat;
+background-size: contain; background-position: center right;
+width: 7.448vw;
+height: 21.927vw;
+position: absolute;
+box-sizing: border-box;
+top: 196.16px;
+right: 0;
+z-index: -1;
+} #galeria{
+position: relative;
+}
+#galeria .container{
+margin: 0 auto;
+padding: 140px 0;
+overflow: hidden;
+}
+#galeira .container .top{
+width: 90%;
+max-width: 1402px;
+}
+#galeria .container .bottom {
+width: 155%;
+margin-left: -27.5% !important;
+overflow: visible;
+}
+#galeria .container .titulo{
+width: 45%;
+margin: 0 auto;
+font-size: 45px;
+line-height: 57px;
+font-weight: 700;
+text-align: center;
+color: var(--azul-escuro);
+font-family: 'Acworth';
+}
+#galeria .container .texto{
+margin-top: 20px;
+font-size: 16px;
+line-height: 26px;
+font-weight: 500;
+letter-spacing: 0.02%;
+text-align: center;
+color: #000000; 
+font-family: 'Futura Std Medium';   
+}
+#galeria .bottom .swiper{
+position: relative;
+margin-top: 45px;
+}
+#galeria .bottom .swiper .swiper-slide{
+border-radius: 21.96px !important;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#galeria .bottom .swiper .swiper-slide .etiqueta {
+font-family: 'Futura Std Medium';
+font-weight: 500;
+font-size: 19.77px;
+line-height: 29.65px;
+text-align: center;
+position: relative;
+top: -15px;
+border-radius: 4px;
+padding: 3px 0px;
+color: #FFFFFF;
+background-color: var(--roxo);
+z-index: 10;
+background-size: contain;
+width: 249.9px;
+}
+#galeria .bottom .swiper .swiper-slide .etiqueta::before {
+content: '';
+background-image: url(../images/etiqueta-galeria.svg);
+background-repeat: no-repeat;
+width: 253.66px;
+height: 37.33px;
+padding: 15px;
+position: absolute;
+top: 0px;
+left: 0%;
+transition: .3s ease-in-out;
+z-index: -1;
+}
+#galeria .bottom .swiper .swiper-slide a{
+display: block;
+width: 100%;
+}
+#galeria .bottom .swiper .swiper-slide a .swiper-img{
+border-radius: 21.96px !important;
+height: 23.507vw;
+width: 100%;
+box-shadow: 0px 0px 13.8px 0px #11609C70;
+object-fit: cover;
+}
+.item:before {
+content: url(../images/ico-swiper.svg);
+width: 51.61px;
+height: 51.61px;
+background-color: var(--roxo);
+padding: 15px;
+position: absolute;
+box-sizing: border-box;
+top: 24.16px;
+right: 24.16px;
+border-radius: 50%;
+transition: .3s ease-in-out;
+}
+.item:hover::before {
+transform: scale(1.15);
+}
+.fbx-caption-title {
+font-size: 0 !important;
+padding: 15px;
+}
+#galeria .bottom:after {
+content: '';
+background: url(../images/mulher-puxando-pesinho.webp) no-repeat;
+width: 10.156vw;
+height: 16.719vw;
+padding: 15px;
+background-size: cover;
+position: absolute;
+box-sizing: border-box;
+top: 61%;
+left: 21.35vw;
+transition: .3s ease-in-out;
+z-index: 10;
+}
+.swiper-pagination {
+position: absolute;
+bottom: 60px !important;
+text-align: center;
+transition: .3s opacity;
+transform: translate3d(0, 0, 0);
+z-index: 10;
+}
+.swiper-pagination-bullet-active {
+opacity: var(--swiper-pagination-bullet-opacity, 1);
+background: var(--roxo) !important;
+}
+.swiper-button-next, .swiper-button-prev {
+width: 30px !important;
+height: 34px !important;
+top: auto !important;
+bottom: 0 !important;
+color: var(--roxo) !important;
+scale: 0.41 !important;
+}
+.swiper-button-next:after {
+position: absolute;
+top: -133px;
+right: 31.4vw;
+font-weight: 900;
+}
+.swiper-button-prev:after {
+position: absolute;
+top: -133px;
+left: 31.4vw;
+font-weight: 900;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+width: 10px !important;
+margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+height: 10px !important;
+} #plantas{
+position: relative;
+}
+#plantas .container .bottom .conteudo div .slide-img a:hover:after{
+transform: scale(1.15);
+}
+#plantas .container{
+width: 90%;
+max-width: 1403px;
+margin: 0 auto;
+padding: 140px 0;
+}
+#plantas .container .top .titulo{
+color: var(--roxo);
+font-size: 40px;
+font-weight: 700;
+text-align: center;
+line-height: 47px;
+margin-bottom: 20px;
+position: relative;
+font-family: 'Acworth';
+}
+#plantas .container .top .texto{
+width: 48%;
+margin: 0 auto;
+color: #1D1D1B;
+font-size: 16px;
+font-weight: 500;
+text-align: center;
+line-height: 26px;
+margin-bottom: 35px;
+font-family: 'Futura Std Medium';
+}
+#plantas .container .bottom{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#plantas .container .bottom .conteudo-01 {
+display: flex;
+}
+#plantas .container .bottom .conteudo {
+position: relative;
+max-width: 1078px;
+width: 100%;
+height: 622px;
+background: url(../images/fundo-planta.webp) no-repeat;
+background-size: cover;
+border-radius: 18px;
+background-position: 100%;
+padding: 54px 66px 52px 66px; 
+gap: 100px;
+box-shadow: #11609C45;
+}
+#plantas .container .bottom .conteudo .dir .titulo{
+width: 177.98px;
+height: auto;
+margin-bottom: 18px;
+}
+#plantas .container .bottom .conteudo .dir .metragem{
+width: 233.77px;
+height: auto;
+margin-top: 12px;
+}
+#plantas .container .bottom .conteudo .esq .planta-baixa{
+width: 577.34px;
+height: auto;
+}
+#plantas .container .bottom .conteudo div{
+max-width: 1054px;
+position: relative;
+display: flex;
+}
+#plantas .container .bottom .conteudo .dir{
+display: flex;
+flex-direction: column;
+}
+#plantas .container .bottom .conteudo div .card-img{
+width: 100%;
+object-fit: cover;
+border-radius: 17.71px;
+position: relative;
+}
+#plantas .container .bottom .conteudo div .slide-img {
+width: 233.77px;
+height: auyo;
+position: absolute;
+bottom: 0;
+left: 8px;
+height: auto;
+border-radius: 17.71px;
+}
+#plantas .container .bottom .conteudo div img{
+width: 100%;
+} #plantas .container .bottom .botoes{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 70px; border-image-slice: 1;
+border-radius: 65px;
+margin-bottom: 30px;
+gap: 0.781vw;
+position: relative;
+padding: 10px;
+}
+#plantas .container .bottom .botoes::after {
+content: '';
+width: 542px;
+height: 72px;
+background-image: url(../images/borda-colorida.svg);
+background-repeat: no-repeat;
+background-size: 100%;
+background-position: center;
+position: absolute;
+z-index: -1;
+transition: 0.3s ease-in-out;
+}
+#plantas .container .bottom .botoes > * {
+background: transparent; 
+border-radius: 72px; 
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#plantas .container .bottom .botao-01 span,
+#plantas .container .bottom .botao-02 span{
+color: var(--azul-escuro);
+font-weight: 300;
+font-size: 24px;
+font-family: 'Futura Std Medium';
+}
+#plantas .container .bottom .botao-01 span.destaque,
+#plantas .container .bottom .botao-02 span .destaque{
+font-weight: 700;
+}
+.conteudo {
+display: none !important;
+transition: opacity 0.3s ease;
+}
+.conteudo.ativo {
+display: flex !important;
+}
+.botao {
+cursor: pointer;
+padding: 10px 20px;
+border-radius: 30px;
+transition: all 0.4s ease;
+}
+.botao.ativo {
+background-color: #A63C8B !important;
+}
+.botao.ativo span {
+color: #ffffff !important ;
+}
+#plantas .container .bottom .conteudo div .slide-img a:after {
+content: '';
+width: 38.35px;
+height: 38.35px;
+background-image: url(../images/ico-swiper.svg);
+background-repeat: no-repeat;
+background-size: 60%; background-position: center;
+background-color: var(--roxo);
+position: absolute;
+top: 14.85px;
+right: 12.12px;
+border-radius: 50%;
+transition: 0.3s ease-in-out;
+}
+#plantas .container .top .titulo:before {
+content: '';
+background-image: url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/images/icones/vetor-gradient.svg);
+width: 35.417vw;
+height: 2px;
+background-repeat: no-repeat;
+position: absolute;
+top: 27px;
+left: -282px;
+}
+#plantas .container .top .titulo::after {
+content: '';
+background-image: url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/images/icones/vetor-gradient.svg);
+width: 680px;
+height: 2px;
+background-repeat: no-repeat;
+position: absolute;
+top: 27px;
+right: -456px
+}
+#plantas .plantas-fundo{
+position: relative;
+}
+#plantas .plantas-fundo::before {
+content: '';
+position: absolute;
+top: 38.5vw;
+left: 0;
+width: 164vw;
+height: 158vw;
+background-image: url(../images/fundo-3.webp);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+opacity: 1;
+z-index: -1;
+} #contato-02 {
+padding: 50px 0 1.8vw;
+color: var(--roxo);
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+#contato-02 .container {
+display: flex;
+width: 90%;
+max-width: 1375px;
+margin: 0 auto;
+gap: 7.92vw;
+align-items: center;
+}
+#contato-02 .esq {
+width: 52%;
+}
+#contato-02 .esq img {
+margin-left: 20%;
+margin-top: 72px;
+}
+#contato-02 .dir {
+width: 37.9%;
+height: 658px;
+background-image: url(../images/bgd-form.webp);
+background-repeat: no-repeat;
+border-radius: 20px;
+color: var(--branco);
+padding: 2.12vw 3.685vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+#contato-02 .container {
+display: flex;
+width: 90%;
+max-width: 1375px;
+margin: 0 auto;
+gap: 7.92vw;
+align-items: center;
+}
+#contato-02 .esq {
+width: 52%;
+}
+#contato02 .esq img {
+margin-top: 10%;
+margin-left: 23%;
+}
+#contato-02 .dir {
+width: 37.9%;
+height: 658px;
+background-size: cover;
+background: linear-gradient(34.47deg, #E94C97 -6.67%, #FFB7D9 103.08%);  
+background-repeat: no-repeat;
+border-radius: 20px;
+color: var(--branco);
+padding: 2.12vw 3.685vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#contato-02 .form-titulo {
+font-weight: 300;
+font-family: 'Futura Std Medium';
+font-size: 30px;
+line-height: 35px;
+letter-spacing: 1.2px;
+text-align: center;
+margin-bottom: 5px;
+color: #000000
+}
+#contato-02 .dir svg {
+margin-top: 20px;
+margin-bottom: 25px;
+width: 10.677vw;
+height: auto;
+}
+#contato-02 .obrigatorios {
+font-weight: 500;
+font-family: 'Futura Std Medium';
+font-size: 12px;
+line-height: 13.63px;
+letter-spacing: 0.01em;
+color: #FCF4E7;
+}
+#contato-02 .form-padrao {
+width: 100%;
+margin-top: 30.02px;
+}
+#contato-02 .dir .box-input {
+margin-bottom: 13px;
+position: relative;
+align-items: center;
+display: flex;
+gap: 6px;
+}
+#contato-02 .dir .box-input input, 
+#contato-02 .dir .box-input select, 
+#contato-02 .dir .box-input textarea {
+width: 100%; height: 41.94px;
+border: 1.5px solid #FCF4E7;
+color: var(--branco);
+background-color: transparent;
+border-radius: 13px;
+font-size: 14px;
+padding-left: 12px;
+transition: .3 ease-in-out;
+font-family: 'Acworth';
+}
+#contato-02 .dir .box-input textarea {
+height: 55.92px !important;
+font-family: 'Acworth';
+}
+#contato-02 .dir .box-input .label-form {
+color: #FCF4E7;
+position: absolute;
+top: 14px;
+left: 21px;
+font-size: 14px;
+font-weight: 600;
+transition: var(--transicao);
+z-index: 1;
+transition: top 0.3s ease, font-size 0.4s ease, color 0.4s ease;
+font-family: 'Acworth';
+}
+#contato-02 .dir .box-input .label-form.subir {
+background-color: #E94C97;
+padding: 3px 8px;
+left: 13.25px;
+top: -9px;
+border-radius: 6px;
+z-index: 1;
+font-size: 12px;
+}
+input:focus,
+textarea:focus {
+outline: none;
+box-shadow: none;
+}
+#contato-02 .dir .box-input {
+margin-bottom: 15px;
+position: relative;
+display: -webkit-box;
+display: -ms-flexbox;
+align-items: center;
+display: flex;
+gap: 6px;
+}
+#contato-02 .dir .box-input.box-check input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+border: 0.93px solid #FFFFFF!important;
+background-color: transparent !important;
+border-radius: 4px;
+width: 17px;
+height: 17px;
+cursor: pointer;
+position: relative;
+} #contato-02 .dir .box-input.box-check input[type="checkbox"]:checked::after {
+content: "✔";
+color: white;
+font-size: 10px;
+position: absolute;
+top: 0px;
+left: 4px;
+}
+#contato-02 .dir .enviar {
+color: #ffffff;
+background-color:var(--azul-claro);
+border: none;
+font-size: 21px;
+line-height: 16.78px;
+font-weight: 700;
+letter-spacing: 0.01%;
+border-radius: 13px;
+padding: 14px 0;
+display: block;
+width: 100%;
+overflow: hidden;
+position: relative;
+text-align: center;
+transition: var(--transicao);
+cursor: pointer;
+}
+#contato-02 .dir .enviar:hover {
+transform: translateY(-2px) scale(1.02);
+background-color: #E94C97 ; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+#contato-02 .dir .autorizo {
+font-size: 10.81px;
+margin-left: 5px;
+text-align: left;
+flex: 1;
+color: #FCF4E7;
+font-weight: 400;
+}
+#contato-02:before {
+content: '';
+background: url(../images/arcoiris-direita.webp) no-repeat;
+width: 18.229vw;
+height: 40.313vw;
+background-size: contain;
+position: absolute;
+box-sizing: border-box;
+top: -10.84px;
+left: 0;
+}
+#contato-02:after {
+content: '';
+background: url(../images/arcoiris-esquerda.webp) no-repeat;
+width:7.344vw;
+height: 22.135vw;
+position: absolute;
+background-size: contain;
+box-sizing: border-box;
+top: 196.16px;
+right: 0;
+} #lazer{
+position: relative;
+}
+#lazer .container{
+margin: 0 auto;
+width: 1315px;
+max-width: 90%;
+margin-top: 150px;
+}
+#lazer .container .titulo{
+color: var(--azul-escuro);
+font-size: 40px;
+font-weight: 700;
+text-align: center;
+line-height: 47px;
+margin-bottom: 20px;
+position: relative;
+font-family: 'Acworth';
+}
+#lazer .container .texto{
+color: #1D1D1B;
+font-size: 16px;
+font-weight: 500;
+text-align: center;
+line-height: 26px;
+margin-bottom: 35px;
+font-family: 'Futura Std Medium';
+}
+#lazer .container .content .titulo{
+display: flex;
+color: var(--roxo);
+font-size: 40px;
+font-weight: 700;
+line-height: 47px;
+margin-bottom: 20px;
+position: relative;
+margin-top: 35px;
+margin-bottom: 31px;
+font-family: 'Acworth';
+}
+#lazer .container .content .texto{
+color: #1D1D1B;
+font-size: 16px;
+font-weight: 500;
+text-align: center;
+line-height: 26px;
+margin-bottom: 35px;
+font-family: 'Futura Std Medium';
+}
+#lazer .container .content .listas{
+display: flex;
+justify-content: flex-start;
+gap: 9.9vw;
+}
+#lazer .container .content .listas-terreo{
+display: flex;
+justify-content: flex-start;
+gap: 9.688vw;
+}
+#lazer .container .content .listas .lista{
+display: flex;
+flex-direction: column;
+gap: 28px;
+}
+#lazer .container .content .listas .lista-2{
+order: 2;
+}
+#lazer .container .content .listas .lista li{
+display: flex;
+gap: 25px;
+font-weight: 500;
+font-size: 18px;
+color: #000000;
+align-items: center;
+font-family: 'Futura Std Medium';
+}
+#lazer .container .content .listas .lista li .numero{
+font-size: 21px;
+font-weight: 700;
+text-align: center;
+position: relative;
+color: white;
+font-family: "Gal Gothic Trial";
+}
+#lazer .container .content .listas .lista li .texto-menor{
+font-size: 14px;
+font-weight: 500;
+margin-left: -22px;
+}
+#lazer .container .content .listas .lista-1{
+position: relative;
+}
+#lazer .container .content .listas .lista-1:before {
+content: '';
+background-image: url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/images/menino-fut.webp);
+width: 8.854vw;
+background-size: cover;
+height: 17.188vw;
+background-repeat: no-repeat;
+position: absolute;
+top: 7.3vw;
+right: -65vw;
+z-index: -1;
+}
+#lazer .container .content .listas .lista li .numero:after {
+content: url(../images/ico-lista-lazer.svg);
+width: 41.54px;
+height: auto;
+padding: 15px;
+position: absolute;
+box-sizing: border-box;
+top: -24.5px;
+left: -22px;
+border-radius: 50%;
+transition: .3s ease-in-out;
+z-index: -1;
+}
+#lazer .container .content .terreo{
+margin-top: 138.08px;
+margin-bottom: 35px;
+}
+#lazer .container .titulo.principal::after {
+content: '';
+background-image: url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/images/icones/vetor-gradient.svg);
+width: 621px;
+height: 2px;
+background-repeat: no-repeat;
+position: absolute;
+top: 27px;
+left: -307px;
+}
+#lazer .container .titulo.principal::before {
+content: '';
+background-image: url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/images/icones/vetor-gradient.svg);
+width: 649px;
+height: 2px;
+background-repeat: no-repeat;
+position: absolute;
+top: 27px;
+right: -447px;
+} #localizacao .separador_mapa {
+background-color: var(--azul-escuro);
+color: var(--amarelo);
+text-align: center;
+font-size: 1.979vw;
+padding: 30px 10px !important;
+font-family: 'Futura Std Bold';
+}
+#localizacao .separador_mapa span{
+color: #FFFFFF;
+}
+#gmap-holder {
+position: relative;
+}
+#gmap-holder .botoes {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 3.65vw;
+position: absolute;
+bottom: -1.5vw;
+width: 100%;
+}
+#gmap-holder .botoes .botao-waze img {
+width: 30px;
+height: 33px;
+}
+#gmap-holder .botoes .botao-mapa img {
+width: 22px;
+height: 22px;
+}
+#gmap-holder .botoes .botao-waze {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 15px;
+bottom: -3.77vw;
+background-color: #00b5ec;
+border-radius: 14px;
+padding: 11px 47px 10px 30px ;
+color: #FFFFFF;
+font-size: 18px;
+font-weight: 700;
+font-family: 'Acworth';
+}
+#gmap-holder .botoes .botao-mapa {
+display: flex;
+align-items: center;
+justify-content: center;
+gap:15px;
+bottom: -3.77vw;
+border: 1px solid var(--roxo);
+padding: 14px 33.95px 13px 20px;
+border-radius: 14px;
+color: #000000;
+font-size: 18px;
+font-weight: 400;
+background-color: #FFFFFF;
+font-family: 'Acworth';
+}
+#gmap-holder .botoes a {
+transition: .3s ease-in-out;
+text-decoration: none;
+}
+#gmap-holder .botoes a:hover {
+scale: 1.05;
+}
+#localizacao .detalhes {
+padding: 7.8125vw 0 5.20vw;
+}
+#localizacao .linha_detalhes {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 5.2vw;
+}
+#localizacao .detalhes_coluna:nth-child(1) {
+width: calc(53% - 2.6vw);
+}
+#localizacao .detalhes_coluna:nth-child(2) {
+width: calc(47% - 2.6vw);
+}
+#localizacao .linha_detalhes p {
+font-size: 12px;
+color: #000;
+margin-top: 0.5vw;
+}
+#localizacao .detalhe_linha {
+gap: 10px;
+display: flex;
+flex-wrap: wrap;
+}
+#localizacao .detalhe_linha div {
+width: calc(50% - 5px);
+}
+#localizacao .mobilidade{
+width: 100%;
+object-fit: cover;
+margin-top: 170px;
+}
+#localizacao .planta-mapa{
+margin: 0 auto;
+margin-top: 147px ;
+} #realizacao {
+padding: 120px 0;
+position: relative;
+}
+#realizacao .container {
+max-width: 1403px;
+width: 90%;
+margin: 0 auto;
+}
+#realizacao .texto-realizacao {
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+font-size: 22px;
+line-height: 23.1px;
+letter-spacing: 5%;
+text-align: center;
+}
+#realizacao .container-principal {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 9.115vw;
+}
+#realizacao .logos p{
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+font-size: 18px;
+line-height: 23.1px;
+text-align: center;
+}
+#realizacao .logos{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+#realizacao .logos .incorporacao{
+display: flex;
+gap: 2.76vw;
+margin-top: 30px;
+}
+#realizacao .logos .incorporacao .foal-corporadora{
+height: 3.854vw;
+width: auto;
+}
+#realizacao .logos .incorporacao .mendes-salge{
+height: 2.813vw;
+width: auto;
+}
+#realizacao .logos .caixa{
+height: 2.292vw;
+width: auto;
+margin-top: 44px;
+}
+#realizacao .logos .imobiliaria{
+height:3.958vw ;
+width: auto;
+margin-top: 25px;
+}
+#realizacao:before {
+content: url(../images/fundo-4.webp);
+width: 100%;
+height: auto;
+position: absolute;
+box-sizing: border-box;
+top: -44vw;
+z-index: -1;
+opacity: 1
+} #politica-privacidade {
+padding: 80px 0;
+background-color: white;
+font-family: 'Montserrat', sans-serif;
+}
+#politica-privacidade .container{
+width: 90%;
+max-width: 1403px;
+margin: 0 auto;
+}
+#politica-privacidade .politica-privacidade {
+color: #000;
+font-size: 12px;
+line-height: 12px;
+text-align: center;
+font-weight: 700;
+margin-bottom: 5px;
+font-family: 'Montserrat', sans-serif;
+}
+#politica-privacidade .politica-texto {
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 8%;
+text-align: center;
+margin-bottom: 20px;
+font-family: 'Montserrat', sans-serif;
+} #colophon {
+background-color: var(--azul-escuro);
+padding: 21px 0 78px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#colophon .container {
+align-items: center;
+display: flex;
+flex-direction: row;
+justify-content: center;
+max-width: 100%;
+width: 75.1%;
+}
+.clearfix:after {
+display: none;
+}
+#footer-bottom {
+background-color: transparent;
+}
+.hone_hp {
+display: none !important;
+}
+.fbx-caption {
+transition: visibility .01s ease, opacity .01s ease, transform .01s ease!important;
+-webkit-transition: visibility .01s ease, opacity .01s ease, transform .01s ease!important;
+-moz-transition: visibility .01s ease, opacity .01s ease, transform .01s ease!important;
+-ms-transition: visibility .01s ease, opacity .01s ease, transform .01s ease!important;
+-o-transition: visibility .01s ease, opacity .01s ease, transform .01s ease!important;
+} .footer-fixo .container:before{
+content: '';
+background-image: url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/images/icones/detalhe-footer-fixo.svg);
+width: 100vw;
+background-size: cover;
+height: 62px;
+background-repeat: no-repeat;
+position: absolute;
+top: -12px; z-index: -1;
+}
+.texto_mbl,
+#whats_mobile {
+display: none;
+}
+#whats_desktop {
+display: flex;
+}
+.footer-fixo {
+width: 100%;
+position: fixed;
+bottom: 0;
+left: 0;
+background-color:  #A63C8B;
+border-top: 2px solid #E94C97;
+z-index: 99999;
+padding: 12px;
+}
+.footer-fixo .container {
+width: 1270px;
+max-width: 100%;
+margin: auto;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: center;
+justify-content: center;
+align-items: center;
+gap: 20.469vw;
+position: relative;
+}
+.footer-fixo .text .text-uppercase {
+color: #fff;
+font-weight: 700;
+transition: .2s ease all;
+}
+.footer-fixo .text .text-aux {
+color: #fff;
+font-weight: 700 !important;
+}
+.footer-fixo .ico {
+vertical-align: middle;
+display: inline-block;
+width: 55px;
+height: 55px;
+background-size: contain;
+background-position: center center;
+background-repeat: no-repeat;
+margin-right: 0px;
+background-size: 65%;
+}
+.footer-fixo .footer-fixo-item {
+font-family: 'Futura Std Medium';
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: center;
+justify-content: center;
+align-items: center;
+gap: 10px;
+height: 34px;
+border-radius: 10px;
+position: relative;
+cursor: pointer;
+text-decoration: none;
+transition: .3s ease-in-out;
+border: 1px solid rgba(255, 255, 255, 0);
+color: #ffffff;
+}
+.footer-fixo .footer-fixo-item:hover p {
+transition: .2s ease all;
+}
+.footer-fixo p {
+font-weight: 700;
+color: #fff;
+font-size: 14px;
+letter-spacing: 1px;
+text-align: left;
+line-height: 16px;
+}
+.footer-fixo .text-aux {
+font-weight: 700 !important;
+}
+.botao_ligar {
+display: none !important;
+}
+#whats_desktop .text {
+min-width: 130px;
+}
+.ico-mapa {
+background-image: url(../images/ico-localizacao.svg);
+}
+.ico-contato {
+background-image: url(../images/ico-mensagem.svg);
+}
+.ico-whatsapp {
+background-image: url(../images/ico-zap.svg);
+} #container-header #masthead.header-fixo {
+position: fixed;
+background: #A63C8B;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+margin-top: 0;
+width: 100%;
+z-index: 99;
+}
+#container-header #masthead.header-fixo #logo-header {
+padding: 5px 0 5px 10.1%;
+}
+#container-header #masthead.header-fixo #logo-header img {
+height: 55px;
+width: auto;
+}
+#container-header #masthead.header-fixo .main-navigation {
+}
+#container-header #masthead.header-fixo .main-navigation .menu-menu-principal-container {
+padding: 11px 20px;
+}
+#container-header #masthead.header-fixo .main-navigation .nav-wsp {
+padding: 10px 22px;
+}
+#container-header #masthead.header-fixo .main-navigation a:before {
+bottom: -10px;
+}
+#container-header #masthead .menu_mobile {
+display: none;
+}  .error::-webkit-input-placeholder {
+color: #ff0026;
+}
+.animated {
+-webkit-animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+animation-duration: 1s;
+animation-fill-mode: both
+}
+.shake {
+-webkit-animation-name: shake;
+animation-name: shake
+}
+@-webkit-keyframes shake {
+0%,
+to {
+-webkit-transform: translateZ(0);
+transform: translateZ(0)
+}
+10%,
+30%,
+50%,
+70%,
+90% {
+-webkit-transform: translate3d(-10px, 0, 0);
+transform: translate3d(-10px, 0, 0)
+}
+20%,
+40%,
+60%,
+80% {
+-webkit-transform: translate3d(10px, 0, 0);
+transform: translate3d(10px, 0, 0)
+}
+}
+@keyframes shake {
+0%,
+to {
+-webkit-transform: translateZ(0);
+transform: translateZ(0)
+}
+10%,
+30%,
+50%,
+70%,
+90% {
+-webkit-transform: translate3d(-10px, 0, 0);
+transform: translate3d(-10px, 0, 0)
+}
+20%,
+40%,
+60%,
+80% {
+-webkit-transform: translate3d(10px, 0, 0);
+transform: translate3d(10px, 0, 0)
+}
+} .txt-confirmacao {
+color: #000;
+display: block;
+font-size: 17px;
+margin-bottom: 30px;
+text-align: center;
+font-family: 'Futura Std Medium';
+}
+.title-confirmacao {
+color: var(--roxo);
+display: block;
+font-size: 46px;
+font-weight: 700;
+margin-bottom: 20px;
+text-align: center;
+font-family: 'Acworth';
+letter-spacing: 0.2px;
+}
+.btn-confirmacao {
+background: var(--roxo);
+border-radius: 13px;
+color: #fff !important;
+display: block;
+font-size: 18px;
+font-weight: 700;
+left: 50%;
+margin-left: -118px;
+padding: 15px 0;
+position: absolute;
+text-align: center;
+transition: 0.2s;
+width: 236px;
+text-decoration: none;
+}
+.btn-confirmacao:hover {
+filter: brightness(1.2);
+transition: 0.2s;
+}
+.confirmacao {
+padding: 200px 0 300px;
+}
+@media only screen and (max-width: 1920px) {
+#sobre .container .dir{
+width: 46.5%; 
+}
+.footer-fixo .container:before{
+content: '';
+background-image: url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/images/icones/detalhe-footer-fixo.svg);
+width: 100vw;
+background-size: cover;
+height: 3.229vw;
+background-repeat: no-repeat;
+position: absolute;
+top: -12px; z-index: -1;
+}
+}
+@media only screen and (max-width: 1700px) {
+}
+@media only screen and (max-width: 1660px) {
+.ico-whatsapp_02 {
+left: 35px;
+width: 65px !important;
+height: 65px !important;
+}
+.footer-fixo .container:before {
+height: 6vw;
+}
+#sobre .container .esq {
+width: 40.2%;
+}
+#sobre .container .esq .textos .titulo {
+width: 100%;
+}
+#sobre .container .esq .textos .texto {
+width: 98%;
+}
+#contato:before {
+width: 17.01vw;
+height: 34.313vw;
+top: 36.16px;
+left: 0;
+}
+#contato:after {
+width: 6.448vw;
+height: 17.927vw;
+top: 277.16px;
+}
+#galeria .bottom:after {
+top: 63%;
+}
+#contato-02:before {
+width: 15.229vw;
+height: 38.313vw;
+}
+#contato-02:before {
+top: -90px;
+}
+#contato-02:after {
+width: 6.344vw;
+height: 21.135vw;
+top: 334.16px;
+}
+#plantas .container .top .titulo {
+font-size: 37px;
+}
+#lazer .container .content .listas .lista-1:before {
+right: -70vw;
+z-index: -1;
+}
+}
+@media only screen and (max-width: 1440px) {
+#lazer .container .content .listas .lista-1:before {
+right: -73vw;
+z-index: -1;
+}
+#sobre .container .esq {
+width: 46%;
+}
+#contato .esq img {
+width: 38.194vw;
+}
+#contato .esq img {
+margin-top: 4.514vw;
+margin-left: 4.417vw;
+}
+#contato .dir {
+width: 42%;
+}
+#contato .esq {
+width: 45%;
+}
+#contato-02 .dir {
+width: 42%;
+}
+#contato-02 .esq {
+width: 45%;
+}
+#contato-02 .esq img {
+margin-left: 0%;
+}
+#contato:before {
+top: 120.16px;
+}
+#galeria .bottom .swiper .swiper-slide a .swiper-img {
+border-radius: 21.96px !important;
+height: 27.189vw;
+}
+#galeria .bottom:after {
+top: 66%;
+}
+.ico-whatsapp_02 {
+width: 63px !important;
+height: 63px !important;
+}
+}
+@media only screen and (max-width: 1366px) {
+#lazer .container .content .listas {
+gap: 6.9vw;
+}
+#galeria .container .titulo {
+font-size: 2.835vw;
+line-height: 3.148vw;
+}
+#sobre .container .esq .textos .titulo {
+font-size: 2.835vw;
+line-height: 3.148vw;
+}
+#sobre .container .esq .textos .texto {
+font-size: 18px;
+line-height: 24px;
+width: 99%;
+}
+#galeria .container .titulo {
+width: 56%;
+}
+#plantas .container .top .titulo,
+#lazer .container .titulo,
+#lazer .container .content .titulo {
+font-size: 34px;
+line-height: 43px;
+}
+#galeria .bottom:after {
+top: 63%;
+}
+#container-header .main-navigation ul li a {
+font-size: 13px;
+}
+#plantas .container .top .titulo::after {
+right: -479px;
+}
+}
+@media only screen and (max-width: 1320px) {
+#lazer .container .titulo.principal::after {
+content: '';
+background-image: url(https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/.https://www.playosasco.com.br/wp-content/themes/playcondominioclube/assets/css/images/icones/vetor-gradient.svg);
+width: 620px;
+height: 2px;
+background-repeat: no-repeat;
+position: absolute;
+top: 27px;
+left: -337px;
+}
+}
+@media only screen and (max-width: 1280px) {
+#plantas .container .bottom .conteudo {
+position: relative;
+max-width: 1078px;
+width: 100%;
+height: 700px;
+background: url(../images/fundo-planta.webp) no-repeat;
+background-size: cover;
+border-radius: 18px;
+background-position: 100%;
+padding: 54px 66px 52px 66px; 
+gap: 100px;
+box-shadow: #11609C45;
+}
+#plantas .container .bottom .conteudo div .slide-img {
+bottom: 24px;
+}
+#plantas .container .bottom .conteudo .dir .metragem {
+width: 233.77096557617188px;
+height: auto;
+margin-top: 20px;
+}
+#plantas .container .bottom .conteudo .dir .titulo{
+margin-top: 20px;
+}
+#sobre .container .esq .textos .texto {
+font-size: 16px;
+line-height: 22px;
+width: 99%;
+}
+#sobre .container .esq .topicos ul li {
+font-size: 16px;
+}
+#galeria .container .titulo {
+width: 60%;
+}
+#lazer .container .content .listas {
+display: flex;
+justify-content: flex-start;
+gap: 7.688vw;
+align-items: center;
+flex-wrap: wrap;
+}
+#contato .dir svg {
+margin-top: 20px;
+margin-bottom: 25px;
+width: 12.677vw;
+height: auto;
+}
+#contato:before {
+top: 30.16px;
+}
+#contato:after {
+top: 387.16px;
+}
+#plantas .container .top .titulo, #lazer .container .titulo, #lazer .container .content .titulo {
+font-size: 32px;
+line-height: 43px;
+}
+#container-header .main-navigation ul li a {
+font-size: 12px;
+}
+#plantas .container .top .titulo::after {
+display: none;
+}
+#plantas .container .top .titulo:before {
+display: none;
+}
+#lazer .container .titulo.principal::before {
+display: none;
+}
+#lazer .container .titulo.principal::after {
+display: none;
+}
+#lazer .container .content .listas .lista-1:before {
+display: none;
+}
+#lazer .container .content .listas{
+column-gap: 16vw !important;
+row-gap: 30px;
+}
+#lazer .container .content .listas .lista {
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+}
+@media only screen and (max-width: 1170px) {
+#plantas .container .top .titulo, #lazer .container .titulo, #lazer .container .content .titulo {
+font-size: 30px;
+line-height: 43px;
+}
+}
+@media only screen and (max-width: 1080px) {
+#lazer .container .titulo.principal::before {
+right: -452px;
+}
+#lazer .container .titulo.principal::after {
+left: -340px;
+}
+}
+@media only screen and (max-width: 1024px) {
+#plantas .container .bottom .conteudo .dir .metragem {
+width: 22.829vw;
+height: 19.8vw;
+margin-top: 2.604vw;
+}
+#plantas .container .bottom .conteudo div .slide-img {
+position: static;
+width: 22.829vw;
+height: 19.8vw;
+}
+#plantas .container .bottom .conteudo{
+height: 100%;
+flex-direction: column;
+align-items: center;
+}
+#plantas .container .bottom .conteudo .dir {
+flex-direction: row;
+gap: 6.51vw;
+}
+#plantas .container .bottom .conteudo .dir .titulo{
+position: absolute;
+top: -54px;
+margin-top: 2.604vw;
+margin-bottom: 0px;
+}
+#plantas .container .bottom .conteudo{
+gap: 20px;
+padding: 102px 45px 66px 45px
+}
+#container-header .main-navigation ul li a{
+font-family: 'Futura Std Medium';
+}
+#lazer .container .content .listas .lista-1:before {
+display: none;
+}
+#container-header .main-navigation.header-fixo{
+border-radius: none;
+}
+#container-header .main-navigation ul li a {
+font-size: 18px;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+font-weight: 600;
+}
+#container-header .main-navigation .menu-item a:before {
+content: none;
+}
+.header-fixo#masthead #logo-header {
+margin-top: 0;
+background-color: transparent;
+}
+#container-header #masthead.header-fixo {
+height: 65px;
+background: transparent;
+box-shadow: none;
+}
+#logo-header::after {
+display: none;
+}
+#container-header #masthead .menu_mobile {
+display: block;
+}
+#masthead .btn-nav {
+background: var(--roxo);
+border: none;
+cursor: pointer;
+padding: 20px;
+position: absolute;
+right: 0px;
+top: 0px;
+z-index: 99999;
+border-radius: 0;
+}
+.header-fixo#masthead .btn-nav {
+top: 0;
+}
+#masthead .btn-nav:focus {
+outline: 0;
+}
+#masthead .icon-bar {
+background-color: #fff;
+border-radius: 20px;
+display: block;
+height: 2px;
+margin: 7px 0;
+width: 33px;
+}
+#masthead .btn-nav:hover .icon-bar {
+background-color: #fff;
+border-radius: 20px;
+}
+#masthead .animated_menu {
+display: block;
+margin: 0 auto;
+position: fixed;
+}
+#container-header {
+z-index: 999;
+position: relative;
+}
+#masthead #menu-item-15.animated_menu,
+#masthead #menu-item-17.animated_menu {
+position: relative;
+}
+#masthead .overflow-hidden {
+overflow: hidden;
+}
+#masthead .animated_menu:hover .icon-bar,
+#masthead .animated_menu:focus .icon-bar {
+background-color: #fff;
+border-radius: 20px;
+}
+#masthead .animated_menu:focus {
+cursor: pointer;
+z-index: 9999;
+}
+#masthead .middle {
+margin: 0 auto;
+}
+#masthead .icon-bar {
+-o-transition: all .5s ease;
+-webkit-transition: all .5s ease;
+transition: all .5s ease;
+z-index: 999999;
+}
+#masthead .animated_menu .icon-bar {
+background-color: #fff;
+border-radius: 20px;
+z-index: 999999;
+}
+#masthead .animated_menu .top {
+-ms-transform: translateY(8px) rotateZ(45deg);
+-webkit-transform: translateY(8px) rotateZ(45deg);
+transform: translateY(8px) rotateZ(45deg);
+}
+#masthead .animated_menu .bottom {
+-ms-transform: translateY(-10px) rotateZ(-45deg);
+-webkit-transform: translateY(-10px) rotateZ(-45deg);
+transform: translateY(-10px) rotateZ(-45deg);
+}
+#masthead .animated_menu .middle {
+width: 0;
+}
+.central-cliente .site-header .container-principal {
+box-shadow: none;
+}
+@keyframes showNav {
+from {
+top: -400%;
+}
+to {
+top: 0;
+}
+}
+@-webkit-keyframes showNav {
+from {
+top: -400%;
+}
+to {
+top: 0;
+}
+}
+#masthead .showNav {
+-webkit-animation: showNav .5s ease forwards;
+animation: showNav .5s ease forwards;
+}
+@keyframes hideNav {
+from {
+top: 0;
+}
+to {
+top: -800%;
+}
+}
+@-webkit-keyframes hideNav {
+from {
+top: 0;
+}
+to {
+top: -800%;
+}
+}
+#masthead .hideNav {
+-webkit-animation: hideNav .8s ease forwards;
+animation: hideNav .8s ease forwards;
+}
+#container-header .main-navigation {
+display: none;
+background-color: #A63C8B;
+bottom: 0;
+height: 100vh;
+left: 0;
+position: fixed;
+right: 0;
+top: -100%;
+z-index: 10;
+width: 100%;
+padding: 20px;
+flex-direction: column;
+border-radius: 0;
+}
+.main-navigation.showNav {
+display: flex !important;
+animation: showNav .5s ease forwards;
+}
+.main-navigation.hideNav {
+animation: hideNav .8s ease forwards;
+}
+.overflow-hidden {
+overflow: hidden;
+}
+#container-header .main-navigation .menu-item:after {
+content: none;
+}
+#container-header .main-navigation a:before {
+content: none;
+}
+.main-navigation ul {
+display: flex !important;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+gap: 25px;
+}
+#container-header .menu-menu-principal-container {
+padding: 0;
+border-radius: 0;
+}
+#container-header .main-navigation .menu-item {
+padding-right: 0;
+}
+#lazer .container .titulo.principal::before{
+display: none;
+}
+#lazer .container .titulo.principal::after{
+display: none;
+}
+#container-header #masthead .menu_mobile {
+display: block;
+}
+#sobre .container .esq .topicos ul {
+width: 100%;
+}
+#sobre .container {
+width: 90%;
+margin: 0 auto;
+display: flex;
+flex-direction: column-reverse;
+justify-content: flex-end;
+padding: 11.719vw 0;
+padding-bottom: 0vw !important;
+gap: 50px;
+}
+#sobre .container .esq {
+width: 100%;
+}
+#sobre .container .dir {
+width: calc(100% + 7vw);
+position:relative
+}
+#sobre .container .esq .textos .titulo{
+width: 100%;
+}
+#sobre .container .esq .topicos {
+gap: 0;
+}
+#sobre .container .esq .topicos:before {
+width: 100%;
+}
+#contato .container {
+display: flex;
+flex-direction: column;
+width: 90%;
+max-width: 1375px;
+margin: 0 auto;
+gap: 7.92vw;
+align-items: center;
+}
+#contato .dir {
+width: 62.5%;
+}
+#contato .esq {
+width: 100%
+}
+#contato .esq img {
+margin: 0 auto;
+width: 49.512vw;
+}
+#contato-02 .esq {
+width: 100%;
+}
+#contato-02 .container {
+display: flex;
+flex-direction: column;
+}
+#contato-02 .esq img {
+margin: 0 auto;
+width: 49.512vw;
+margin-top: 0px;
+}
+#contato:before {
+display: none;
+}
+#contato:after {
+display: none;
+}
+#galeria .container .titulo {
+width: 90%;
+}
+#galeria .container .texto {
+width: 90%;
+margin-top: 20px !important;
+margin: 0 auto;
+}
+#galeria .container {
+padding: 90px 0;
+}
+#plantas .container{
+padding: 7.719vw 0;
+}
+#plantas .container .bottom .botoes {
+padding: 0 3.516vw;
+gap: 1.859vw;
+}
+#plantas .container .bottom .botao-01 span, #plantas .container .bottom .botao-02 span {
+color: var(--azul-escuro);
+font-weight: 300;
+font-size: 2.246vw;
+}
+#plantas .container .bottom .botoes::after {
+content: '';
+width: 53vw;
+height: 7vw;
+}
+.botao {
+cursor: pointer;
+padding: 0.977vw 1.953vw;
+}
+#contato-02:before {
+display: none;
+}
+#contato-02:after {
+display: none;
+}
+#contato-02 .container {
+display: flex;
+flex-direction: column;
+width: 90%;
+max-width: 1375px;
+margin: 0 auto;
+gap: 7.92vw;
+align-items: center;
+}
+#contato-02 .dir {
+width: 62.5%;
+}
+#localizacao .separador_mapa {
+font-size: 24px
+}
+#localizacao .mobilidade{
+margin-top: 90px
+}
+#lazer .container {
+margin-top: 90px
+}
+#lazer .container .content .terreo {
+margin-top: 10.477vw;
+}
+#localizacao .planta-mapa {
+width: 90%;
+margin-top: 14.355vw;
+}
+#realizacao {
+padding: 11.719vw 0;
+}
+#realizacao .container-principal {
+display: flex;
+flex-direction: column;
+}
+#realizacao .logos .imobiliaria {
+height: 7.422vw;
+}
+#realizacao .logos .caixa {
+height: 4.297vw;
+}
+#realizacao {
+padding: 90px 0;
+}
+#realizacao .logos .incorporacao .mendes-salge {
+height: 5.273vw;
+}
+#realizacao .logos .incorporacao .foal-corporadora {
+height: 7.227vw;
+}
+#galeria .bottom .swiper .swiper-slide a .swiper-img {
+border-radius: 21.96px !important;
+height: 34.075vw;
+}
+#galeria .bottom:after {
+width: 14.156vw;
+height: 23.719vw;
+padding: 15px;
+background-size: cover;
+position: absolute;
+box-sizing: border-box;
+top: 61%;
+left: 12.75vw;
+transition: .3s ease-in-out;
+z-index: 10;
+}
+#galeria .bottom:after {
+display: none;
+}
+#contato-02 .dir svg {
+width: 29vw
+}
+#galeria .container .titulo {
+font-size: 28px;
+line-height: 36px
+}
+#sobre .container .esq .textos .titulo {
+font-size: 28px;
+line-height: 36px
+}
+#plantas .container .top .titulo, #lazer .container .titulo, #lazer .container .content .titulo {
+font-size: 28px;
+line-height: 36px;
+}
+#plantas .container .top .texto{
+width: 100%;
+}
+#realizacao .container-principal {
+gap: 6vw;
+}
+#realizacao .logos .caixa {
+margin-top: 30px;
+}
+#galeria .bottom .swiper .swiper-slide .etiqueta {
+font-size: 17px;
+}
+}
+@media only screen and (max-width: 900px) {
+#galeria .bottom:after {
+top: 63%;
+}
+.footer-fixo .footer-fixo-item .text{
+display: none;
+}
+.footer-fixo .container:before {
+height: 9vw;
+}
+}
+@media only screen and (max-width: 768px) {
+#plantas .container .bottom .conteudo {
+gap: 35px;
+}
+#plantas .container .bottom .conteudo .dir .metragem {
+width: 29.829vw;
+height: auto;
+}
+#plantas .container .bottom .conteudo .dir .titulo {
+width:24.829vw;
+}
+#plantas .container .bottom .conteudo .dir {
+flex-direction: row;
+}
+#plantas .container .bottom .conteudo div .slide-img {
+width: 28.829vw;
+}
+.footer-fixo .ico {
+scale: 0.8;
+}
+iframe{
+height: 400px;
+}
+.texto{
+font-size: 14px;
+}
+#sobre .container .esq .topicos {
+display: flex;
+flex-direction: column;
+}
+#contato .dir {
+width: 75.2%;
+}
+#contato-02 .dir {
+width: 75.2%;
+}
+#contato-02 .dir svg {
+width: 30vw
+}
+#plantas .container .bottom .botao-01 span, #plantas .container .bottom .botao-02 span {
+color: var(--azul-escuro);
+font-weight: 300;
+}
+.item:before {
+width: 45px;
+height: 45px;
+padding: 11px
+}
+#plantas .container .bottom .conteudo div .slide-img a:after {
+scale: 0.8;
+top: 10.85px;
+right: 10.12px;
+}
+#lazer .container .content .listas{
+flex-direction: column;
+align-items: flex-start;
+}
+}
+@media only screen and (max-width: 767px) {
+#galeria .container .bottom {
+width: 200%;
+margin-left: -50% !important;
+overflow: visible;
+}
+}
+@media only screen and (max-width: 700px) {
+.texto{
+font-size: 14px;
+}
+#contato .esq img {
+margin: 0 auto;
+width: 72.429vw;
+}
+#contato-02 .esq img {
+margin: 0 auto;
+width: 72.429vw;
+}
+.swiper-pagination {
+position: absolute;
+bottom: 40px !important;
+}
+.swiper-button-next:after {
+position: absolute;
+top: -88px;
+right: 31.4vw;
+font-weight: 900;
+}
+.swiper-button-prev:after {
+position: absolute;
+top: -88px;
+left: 31.4vw;
+font-weight: 900;
+}
+#plantas .container .bottom .botoes::after {
+content: '';
+width: 63vw;
+height: 12vw;
+}
+#plantas .container .bottom .botao-01 span, #plantas .container .bottom .botao-02 span {
+font-size: 2.76vw;
+}
+}
+@media only screen and (max-width: 600px) {
+#contato-02 .dir svg {
+width: 45vw
+}
+#sobre .container .dir .etiqueta::before {
+background-repeat: no-repeat;
+width: 214px;
+background-size: contain;
+top: 0px;
+left: 0%;
+}
+#sobre .container .dir .etiqueta {
+font-family: 'Futura Std Medium';
+font-weight: 500;
+font-size: 14px;
+line-height: 29.85px;
+text-align: center;
+position: relative;
+top: -15px;
+border-radius: 4px;
+padding: 0px 0px;
+color: #FFFFFF;
+background-color: var(--roxo);
+z-index: 10;
+background-size: contain;
+width: 211.9px;
+}
+#sobre .container .dir .etiqueta {
+font-size: 14px;
+}
+#contato .dir svg {
+width: 45vw;
+}
+#lazer .container .content .listas .lista li .numero:after
+.footer-fixo .container:before {
+height: 12vw;
+}
+#contato .dir,
+#contato-02 .dir  {
+width: 90.2%;
+}
+#localizacao .separador_mapa {
+font-size: 18px
+}
+#gmap-holder .botoes .botao-mapa {
+padding: 2.33vw 7.66vw 2.17vw 6vw;
+font-size: 14px;
+}
+#gmap-holder .botoes .botao-waze{
+padding: 11px 47px 10px 47px;
+font-size: 14px;
+}
+#politica-privacidade {
+padding: 13.333vw 0;
+}
+#contato .esq img {
+margin: 0 auto;
+width: 84.5vw;
+}
+#galeria .bottom .swiper .swiper-slide .etiqueta {
+font-family: 'Futura Std Medium';
+font-weight: 500;
+font-size: 14px;
+line-height: 29.85px;
+text-align: center;
+position: relative;
+top: -15px;
+border-radius: 4px;
+padding: 0px 0px;
+color: #FFFFFF;
+background-color: var(--roxo);
+z-index: 10;
+background-size: contain;
+width: 211.9px;
+}
+#galeria .bottom .swiper .swiper-slide .etiqueta::before {
+background-repeat: no-repeat;
+width: 184px;
+background-size: contain;
+top: 0px;
+left: 0%;
+}
+#galeria .bottom:after {
+top: 71%;
+left: 14.75vw;
+}
+.swiper-button-prev:after {
+position: absolute;
+top: -80px;
+left: 12.4vw;
+font-weight: 900;
+}
+.swiper-button-next:after {
+position: absolute;
+top: -88px;
+right: 12.4vw;
+font-weight: 900;
+}
+#galeria .bottom .swiper .swiper-slide a .swiper-img {
+border-radius: 3.8vw !important;
+height: 40.075vw;
+}
+#galeria .bottom:after {
+display: none;
+}
+.item:before {
+width: 45px;
+height: 45px;
+padding: 11px;
+scale: 0.8;
+top: 20.16px;
+right: 20.16px;
+}
+#plantas .container .bottom .botoes::after {
+content: '';
+width: 69vw;
+height: 14vw;
+}
+#plantas .container .bottom .botao-01 span, #plantas .container .bottom .botao-02 span {
+font-size: 3.2vw;
+}
+#plantas .container .bottom .conteudo div .slide-img a:after {
+scale: 0.7;
+top: 8.85px;
+right: 8.12px;
+}
+#gmap-holder .botoes {
+flex-direction: column;
+bottom: -14.5vw;
+gap: 1.65vw;
+}
+#localizacao .planta-mapa {
+margin-top: 30vw;
+}
+#contato-02 .esq img {
+margin: 0 auto;
+width: 84.5vw;
+}
+#realizacao .logos .caixa {
+height: 9.297vw;
+}
+#realizacao .logos .imobiliaria {
+height: 13.422vw;
+}
+#realizacao .logos .incorporacao .mendes-salge {
+height: 7.273vw;
+}
+#realizacao .logos .incorporacao .foal-corporadora {
+height: 9.227vw;
+}
+#lazer .container .content .listas .lista li{
+font-size: 16px;
+}
+#lazer .container .content .listas .lista li .numero:after{
+scale: 0.75;
+top: -27.5px;
+left: -22px;
+}
+#lazer .container .content .listas .lista li .numero {
+font-size: 16px;
+}
+#plantas .container .bottom .conteudo {
+padding: 86px 25px 56px 25px;
+}
+#plantas .container .bottom .conteudo div .slide-img {
+width: 35.829vw;
+}
+#plantas .container .bottom .conteudo div .slide-img {
+width: 35.829vw;
+}
+#plantas .container .bottom .conteudo .dir .metragem {
+width: 32.829vw;
+}
+#plantas .container .bottom .conteudo .dir .titulo {
+width: 32.829vw;
+}
+}
+@media only screen and (max-width: 500px) {
+.footer-fixo .container:before {
+height: 15vw;
+}
+#contato .dir,
+#contato-02 .dir  {
+width: 100%;
+}
+#gmap-holder .botoes .botao-waze {
+padding: 8px 45px 8px 30px;
+font-size: 14px;
+}
+#gmap-holder .botoes .botao-mapa {
+padding: 11px 26px 11px 26px;
+font-size: 14px;
+}
+#gmap-holder .botoes {
+gap: 1.65;
+}
+#realizacao .logos p {
+font-size: 14px;
+}
+#plantas .container .bottom .conteudo div .slide-img a:after {
+scale: 0.55;
+top: 2.85px;
+right: 2.12px;
+}
+#gmap-holder .botoes {
+flex-direction: column;
+bottom: -15.5vw;
+gap: 1.65vw;
+}
+#plantas .container .bottom .botoes::after {
+width: 90vw;
+}
+#plantas .container .bottom .botao-01 span, #plantas .container .bottom .botao-02 span {
+font-size: 4vw;
+}
+}
+@media only screen and (max-width: 425px) {
+#sobre .container .dir .etiqueta::before {
+background-repeat: no-repeat;
+width: 179px;
+background-size: contain;
+top: 0px;
+left: 0%;
+}
+#sobre .container .dir .etiqueta {
+font-size: 13px;
+line-height: 24.65px;
+left: 21px;
+width: 179px;
+}
+.footer-fixo .ico {
+scale: 0.8;
+}
+#galeria .bottom .swiper .swiper-slide .etiqueta {
+font-family: 'Futura Std Medium';
+font-weight: 500;
+font-size: 13px;
+line-height: 24.65px;
+text-align: center;
+position: relative;
+top: -15px;
+width: 176px;
+color: #FFFFFF;
+background-color: var(--roxo);
+z-index: 10;
+background-size: contain;
+}
+#galeria .bottom .swiper .swiper-slide .etiqueta::before {
+background-repeat: no-repeat;
+width: 146px;
+background-size: contain;
+top: 0px;
+left: 0%;
+}
+#contato .form-titulo,
+#contato-02 .form-titulo {
+font-size: 28px;
+line-height: 33px;
+}
+#contato .esq img {
+margin: 0 auto;
+width: 119.294vw;
+}
+#contato-02 .esq img {
+margin: 0 auto;
+width: 119.294vw;
+}
+.item:before {
+top: 17.16px;
+right: 17.16px;
+}
+#plantas .container .bottom .botoes::after {
+content: '';
+width: 90vw;
+height: 14vw;
+}
+#plantas .container .bottom .botao-01 span, #plantas .container .bottom .botao-02 span {
+font-size: 4vw;
+}
+#gmap-holder .botoes {
+flex-direction: column;
+bottom: -18.5vw;
+gap: 1.65vw;
+}
+.swiper-button-prev:after {
+left: 2.4vw;
+}
+.swiper-button-next:after {
+right: 2.4vw;
+}
+}
+@media only screen and (max-width: 400px) {
+.footer-fixo .container:before {
+display: none;
+}
+}
