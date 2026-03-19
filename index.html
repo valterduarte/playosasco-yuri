@@ -10,7 +10,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="https://gmpg.org/xfn/11">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 <!-- This site is optimized with the Yoast SEO plugin v25.8 - https://yoast.com/wordpress/plugins/seo/ -->
@@ -29,6 +32,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- / Yoast SEO plugin. -->
 <link rel="dns-prefetch" href="//ajax.googleapis.com">
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<link rel="preload" as="image" href="images/banner_mobile_v2.webp" media="(max-width: 660px)">
+<link rel="preload" as="image" href="images/banner_tablet_v2.webp" media="(min-width: 661px) and (max-width: 1024px)">
+<link rel="preload" as="image" href="images/banner_desk_v2.webp" media="(min-width: 1025px)">
 <link rel="alternate" type="application/rss+xml" title="Feed para Play Condomínio Clube �" href="https://www.playosasco.com.br/feed/">
 <link rel="alternate" type="application/rss+xml" title="Feed de comentários para Play Condomínio Clube �" href="https://www.playosasco.com.br/comments/feed/">
 <script>
@@ -53,10 +59,9 @@ padding: 0 !important;
 <link rel="stylesheet" id="playcondominioclube-style-css" href="css/hunvq.css" media="all">
 <link rel="stylesheet" id="swiper_css-css" href="css/swiper-bundle.min.css" media="all">
 <link rel="stylesheet" id="exent_style-css" href="css/hunvq_2.css" media="all">
-<script src="js/jquery.min.js" id="jquery_3_7_1_js-js"></script>
-<script src="js/swiper-bundle.min.js" id="swiper_js-js"></script>
-<script src="js/jquery.min_1.js" id="jquery-core-js"></script>
-<script src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script src="js/jquery.min.js" id="jquery_3_7_1_js-js" defer></script>
+<script src="js/swiper-bundle.min.js" id="swiper_js-js" defer></script>
+<script src="js/jquery-migrate.min.js" id="jquery-migrate-js" defer></script>
 <script id="foobox-free-min-js-before">
 /* Run FooBox FREE (v2.7.35) */
 var FOOBOX = window.FOOBOX = {
@@ -78,7 +83,7 @@ custom: function( $ ){
 }
 };
 </script>
-<script src="js/foobox.free.min.js" id="foobox-free-min-js"></script>
+<script src="js/foobox.free.min.js" id="foobox-free-min-js" defer></script>
 <link rel="https://api.w.org/" href="https://www.playosasco.com.br/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.playosasco.com.br/wp-json/wp/v2/pages/7"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.playosasco.com.br/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.8.2">
 <link rel="shortlink" href="https://www.playosasco.com.br/">
@@ -200,7 +205,7 @@ jQuery('.main-navigation').removeClass('header-fixo');
 <source media="(max-width: 660px)" srcset="images/banner_mobile_v2.webp">
 <source media="(min-width: 661px) and (max-width: 1024px)" srcset="images/banner_tablet_v2.webp">
 <source media="(min-width: 1025px)" srcset="images/banner_desk_v2.webp">
-<img decoding="async" src="images/banner_desk_v2.webp" alt="Banner" loading="lazy" width="1920px" height="897px">
+<img decoding="async" src="images/banner_desk_v2.webp" alt="Banner" fetchpriority="high" width="1920px" height="897px">
 </picture>
 </section>
 <section id="sobre">
