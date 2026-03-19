@@ -642,17 +642,18 @@ spaceBetween: 35.7,
 </div>
 </div>
 <script>
-jQuery(document).ready(function($) {
-$('.botoes .botao').click(function() {
-$('.botoes .botao').removeClass('ativo');
-$(this).addClass('ativo');
-if ($(this).hasClass('botao-01')) {
-$('.conteudo').removeClass('ativo');
-$('.conteudo-01').addClass('ativo');
-} else if ($(this).hasClass('botao-02')) {
-$('.conteudo').removeClass('ativo');
-$('.conteudo-02').addClass('ativo');
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('.botoes .botao').forEach(function(btn) {
+btn.addEventListener('click', function() {
+document.querySelectorAll('.botoes .botao').forEach(function(b) { b.classList.remove('ativo'); });
+btn.classList.add('ativo');
+document.querySelectorAll('.conteudo').forEach(function(c) { c.classList.remove('ativo'); });
+if (btn.classList.contains('botao-01')) {
+document.querySelector('.conteudo-01').classList.add('ativo');
+} else if (btn.classList.contains('botao-02')) {
+document.querySelector('.conteudo-02').classList.add('ativo');
 }
+});
 });
 });
 </script>
