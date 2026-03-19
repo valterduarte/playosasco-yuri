@@ -2515,7 +2515,7 @@ font-size: 17px;
 top: 63%;
 }
 .footer-fixo .footer-fixo-item .text{
-display: none;
+display: block;
 }
 .footer-fixo .container:before {
 height: 9vw;
