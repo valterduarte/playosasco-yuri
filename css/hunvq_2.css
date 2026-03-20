@@ -2136,7 +2136,8 @@ border: none;
 cursor: pointer;
 padding: 20px;
 position: absolute;
-right: 0px;
+left: 0px;
+right: auto;
 top: 0px;
 z-index: 99999;
 border-radius: 0;
@@ -2163,6 +2164,8 @@ border-radius: 20px;
 display: block;
 margin: 0 auto;
 position: fixed;
+left: 0;
+top: 0;
 }
 #container-header {
 z-index: 999;
